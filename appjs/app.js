@@ -12,14 +12,14 @@ console.log (chilometri,prezzo,eta);
 //sconto <18 20%
 let scontoMinorenne = 80
 
-//sconto over 65 60%
+//sconto over 65 40%
 let scontoSenior = 60
 
 //prezzo biglietto finale
 let prezzoFinale
 
 //calcolo finale
-if (eta >= 18 && eta < 65) {
+if (eta >= 18 && eta <= 65) {
     prezzoFinale = prezzo   
 } if (eta<18) {
     prezzoFinale = (prezzo * scontoMinorenne) /100;   
