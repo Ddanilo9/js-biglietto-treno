@@ -1,21 +1,33 @@
 //chiedo quanti chilometri vuole percorrere
 let chilometri = parseInt(prompt('Quanti km vuoi percorrere?'));
-console.log (chilometri);
 
 //chiedo quanti anni ha
 let eta = parseInt(prompt('Quanti anni hai?'));
-console.log (eta);
 
 //prezzo in base ai chilometri da fare
 let prezzo = chilometri * 0.21
-console.log (prezzo);
 
-//sconto <18
-let scontoMinorenne = 0.2
+console.log (chilometri,prezzo,eta);
 
-//sconto over 65
-let scontoSenior = 0.4
+//sconto <18 20%
+let scontoMinorenne = 80
+
+//sconto over 65 60%
+let scontoSenior = 60
 
 //prezzo biglietto finale
-
 let prezzoFinale
+
+//calcolo finale
+if (eta >= 18 && eta < 65) {
+    prezzoFinale = prezzo   
+} if (eta<18) {
+    prezzoFinale = (prezzo * scontoMinorenne) /100;   
+} if (eta>65) {
+    prezzoFinale = (prezzo * scontoSenior) /100;
+}
+
+let boh = document.getElementById(ticket);
+
+ticket.innerHTML = prezzoFinale.toFixed(2) + "€";
+    
